@@ -7,7 +7,7 @@ export default defineConfig({
       id: 'content',
       bundle: true,
       dts: false,
-      format: 'esm',
+      format: 'umd',
       source: {
         entry: { content: './src/content.ts' },
       },
@@ -22,11 +22,21 @@ export default defineConfig({
       },
       tools: { htmlPlugin: true },
     },
+    {
+      id: 'service',
+      bundle: true,
+      dts: false,
+      autoExternal: false,
+      format: 'esm',
+      source: {
+        entry: { service: './src/service.ts' },
+      },
+    },
   ],
   source: {
     define: {
       'process.env.NODE_ENV': JSON.stringify('production'),
-    }
+    },
   },
   output: {
     target: 'web',

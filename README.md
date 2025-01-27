@@ -21,3 +21,10 @@ Build the library in watch mode:
 ```bash
 pnpm dev
 ```
+
+## Launch the extension
+
+```bash
+pnpm playwright install chromium
+pnpm launch
+```
