@@ -54,7 +54,14 @@
   },
   "private": true,
   "dependencies": {
-    "harper.js": "^0.17.0",
+    "harper.js": "0.26.0",
     "type-fest": "^4.33.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "core-js",
+      "esbuild"
+    ]
   }
 }
